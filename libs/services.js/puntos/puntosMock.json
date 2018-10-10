@@ -1,0 +1,32 @@
+[
+    {
+        "nombre":"Ailin",
+        "cantidadDiscord":"2",
+        "tpDiscord":"34",
+        "cantidadCasaMaritima":"2",
+        "tpCasaMaritima":"32",
+        "cantidadMision":"12",
+        "tpMision":"12",
+        "cantidadRenovacionContrato":"123",
+        "tpRenovacionContrato":"13",
+        "cantidadAyudarMiembro":"123",
+        "tpAyudarMiembro":"23",
+        "tp":"123123",
+        "nivelBono":"6"
+    },
+    {
+        "nombre":"sthefano",
+        "cantidadDiscord":"23",
+        "tpDiscord":"3234",
+        "cantidadCasaMaritima":"12",
+        "tpCasaMaritima":"342",
+        "cantidadMision":"142",
+        "tpMision":"12",
+        "cantidadRenovacionContrato":"123",
+        "tpRenovacionContrato":"13",
+        "cantidadAyudarMiembro":"123",
+        "tpAyudarMiembro":"23",
+        "tp":"123",
+        "nivelBono":"8"
+    }
+]
