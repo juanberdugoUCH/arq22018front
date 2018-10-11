@@ -3,6 +3,7 @@ $(function() {
     loadMain();
 
     function loadMain(){
+        $tablaPuntos = $("#tbodyTablaPuntos");
         cargarPuntos();    
     }
 
@@ -15,9 +16,25 @@ $(function() {
         var puntosServices = new PuntosService();
         puntosServices.getPuntos().then(function(puntos) {
             console.log(puntos);
-            //razas.forEach(function(raza) {
-            //    $razaSelect.append($('<option>').val(raza.id_raza).text(raza.raza));
-            //});
+            fila="";
+            puntos.forEach(function(punto) {
+                fila="<tr>";
+                fila += "<td>" + punto.nombre + "</td>";
+                fila += "<td>" + punto.cantidadDiscord + "</td>";
+                fila += "<td>" + punto.tpDiscord + "</td>";
+                fila += "<td>" + punto.cantidadCasaMaritima + "</td>";
+                fila += "<td>" + punto.tpCasaMaritima + "</td>";
+                fila += "<td>" + punto.cantidadMision + "</td>";
+                fila += "<td>" + punto.tpMision + "</td>";
+                fila += "<td>" + punto.cantidadRenovacionContrato + "</td>";
+                fila += "<td>" + punto.tpRenovacionContrato + "</td>";
+                fila += "<td>" + punto.cantidadAyudarMiembro + "</td>";
+                fila += "<td>" + punto.tpAyudarMiembro + "</td>";
+                fila += "<td>" + punto.tp + "</td>";
+                fila += "<td>" + punto.nivelBono + "</td>";
+
+                $tablaPuntos.append(fila);
+            });
         });
     }
 

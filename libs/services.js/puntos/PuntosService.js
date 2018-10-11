@@ -6,6 +6,6 @@ class PuntosService {
     }
 
     getPuntos(){
-        return $.getJSON( this.serviceUrl);   
+        return $.getJSON(this.serviceUrl);   
     }
 }
