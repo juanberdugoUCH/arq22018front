@@ -19,20 +19,21 @@ $(function() {
             fila="";
             puntos.forEach(function(punto) {
                 fila="<tr>";
-                fila += "<td>" + punto.nombre + "</td>";
-                fila += "<td>" + punto.cantidadDiscord + "</td>";
-                fila += "<td>" + punto.tpDiscord + "</td>";
-                fila += "<td>" + punto.cantidadCasaMaritima + "</td>";
-                fila += "<td>" + punto.tpCasaMaritima + "</td>";
-                fila += "<td>" + punto.cantidadMision + "</td>";
-                fila += "<td>" + punto.tpMision + "</td>";
-                fila += "<td>" + punto.cantidadRenovacionContrato + "</td>";
-                fila += "<td>" + punto.tpRenovacionContrato + "</td>";
-                fila += "<td>" + punto.cantidadAyudarMiembro + "</td>";
-                fila += "<td>" + punto.tpAyudarMiembro + "</td>";
-                fila += "<td>" + punto.tp + "</td>";
-                fila += "<td>" + punto.nivelBono + "</td>";
-
+                fila += '<td rowspan="2"  class="align-middle">' + punto.nombre + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadDiscord + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.tpDiscord + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadCasaMaritima + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.tpCasaMaritima + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadMision + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.tpMision + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadRenovacionContrato + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.tpRenovacionContrato + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadAyudarMiembro + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.tpAyudarMiembro + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.tp + '</td>';
+                fila += '<td rowspan="2"  class="align-middle">' + punto.nivelBono + '</td>';
+                fila="</tr>";
+                
                 $tablaPuntos.append(fila);
             });
         });
