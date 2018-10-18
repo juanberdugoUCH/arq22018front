@@ -15,9 +15,11 @@ $(function() {
     function cargarPuntos(){
         var puntosServices = new PuntosService();
         puntosServices.getPuntos().then(function(puntos) {
-            console.log(puntos);
+            alert("kasdasdasda");
+            //console.log(puntos);
             fila="";
             puntos.forEach(function(punto) {
+                console.log(punto);
                 fila="<tr>";
                 fila += '<td rowspan="2"  class="align-middle">' + punto.nombre + '</td>';
                 fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadDiscord + '</td>';
@@ -35,6 +37,7 @@ $(function() {
                 fila="</tr>";
                 
                 $tablaPuntos.append(fila);
+                
             });
         });
     }
