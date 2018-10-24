@@ -15,26 +15,51 @@ $(function() {
     function cargarPuntos(){
         var puntosServices = new PuntosService();
         puntosServices.getPuntos().then(function(puntos) {
-            console.log(puntos);
             fila="";
             puntos.forEach(function(punto) {
+                console.log(punto);
+
                 fila="<tr>";
-                fila += '<td rowspan="2"  class="align-middle">' + punto.nombre + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadDiscord + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.tpDiscord + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadCasaMaritima + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.tpCasaMaritima + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadMision + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.tpMision + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadRenovacionContrato + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.tpRenovacionContrato + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.cantidadAyudarMiembro + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.tpAyudarMiembro + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.tp + '</td>';
-                fila += '<td rowspan="2"  class="align-middle">' + punto.nivelBono + '</td>';
-                fila="</tr>";
+                fila += '<td class="align-middle">' + punto.nombre; 
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.cantidadDiscord;
+                fila += '<a href="#">  <img src="signoMas.png" width="10" height="10"></a>';
+                fila += '<a href="#">  <img src="signoMenos.png" width="10" height="5"></a>';
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.tpDiscord;
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.cantidadCasaMaritima;
+                fila += '<a href="#">  <img src="signoMas.png" width="10" height="10"></a>';
+                fila += '<a href="#">  <img src="signoMenos.png" width="10" height="5"></a>';
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.tpCasaMaritima;
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.cantidadMision;
+                fila += '<a href="#">  <img src="signoMas.png" width="10" height="10"></a>';
+                fila += '<a href="#">  <img src="signoMenos.png" width="10" height="5"></a>';
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.tpMision;
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.cantidadRenovacionContrato;
+                fila += '<a href="#">  <img src="signoMas.png" width="10" height="10"></a>';
+                fila += '<a href="#">  <img src="signoMenos.png" width="10" height="5"></a>';
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.tpRenovacionContrato;
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.cantidadAyudarMiembro;
+                fila += '<a href="#">  <img src="signoMas.png" width="10" height="10"></a>';
+                fila += '<a href="#">  <img src="signoMenos.png" width="10" height="5"></a>';
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.tpAyudarMiembro;
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.tp;
+                fila += '</td>';
+                fila += '<td class="align-middle">' + punto.nivelBono;
+                fila += '</td>';
+                fila += "</tr>";
                 
-                $tablaPuntos.append(fila);
+                $tablaPuntos.append(fila);  
+                console.log(fila);
             });
         });
     }
