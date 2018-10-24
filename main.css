@@ -1,3 +1,8 @@
 .text-aling-center{
     vertical-align: middle;
 }
+
+.sumarPuntos{
+    margin: 2px;
+    cursor: pointer;
+}
