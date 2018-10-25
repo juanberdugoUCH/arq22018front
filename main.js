@@ -65,8 +65,13 @@ $(function() {
         var id = jQuery(this).attr("id");
         var idComponents = id.split("_");
         var puntosServices = new PuntosService();
-        puntosServices.editarPuntos(idComponents[0],idComponents[1], idComponents[1]).then(function(rta) {
-            alert("todo ok");
+
+        puntosServices.editarPuntos(idComponents[0],
+                                    idComponents[1], 
+                                    idComponents[2])
+                                    .then(function(rta) {
+            if(rta.error) alert("todo mal")
+            else alert("todo OK");
         });
     });
       

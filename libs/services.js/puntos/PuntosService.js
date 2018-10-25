@@ -3,7 +3,8 @@ class PuntosService {
     constructor() {
         //this.serviceUrl = "/api/puntos";
         this.serviceUrl = "./libs/services.js/puntos/puntosMock.json";
-        this.editPointsUrl = "/api/editPoints";
+        //this.editPointsUrl = "/api/editPoints";
+        this.editPointsUrl = "./libs/services.js/puntos/actividadResult.json";
     }
 
     getPuntos(){
