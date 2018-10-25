@@ -23,7 +23,7 @@ $(function() {
                 fila += '<td class="align-middle">' + punto.nombre; 
                 fila += '</td>';
                 fila += '<td class="align-middle">' + punto.cantidadDiscord;
-                fila += '<a href="#">  <img src="signoMas.png" width="10" height="10"></a>';
+                fila += '<a href="#" id="sumarPunto">  <img src="signoMas.png" width="10" height="10"></a>';
                 fila += '<a href="#">  <img src="signoMenos.png" width="10" height="5"></a>';
                 fila += '</td>';
                 fila += '<td class="align-middle">' + punto.tpDiscord;
@@ -65,3 +65,8 @@ $(function() {
     }
 
 });
+
+
+function sumarPunto(){
+    
+}
