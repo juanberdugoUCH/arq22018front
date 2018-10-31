@@ -1,9 +1,11 @@
 class PuntosService {
     
     constructor() {
-        this.serviceUrl = "http://localhost:8080/getData";
+        url = new URLHelpers;
+        this.serviceUrl = url.api + "/getData";
+        console.log (this.serviceUrl);
         //this.serviceUrl = "./libs/services.js/puntos/puntosMock.json";
-        //this.editPointsUrl = "/api/editPoints";
+        //this.editPointsUrl = url.api +"/api/editPoints";
         this.editPointsUrl = "./libs/services.js/puntos/actividadResult.json";
     }
 
