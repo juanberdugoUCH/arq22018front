@@ -5,7 +5,7 @@ class LoginService {
         this.serviceUrl = "./libs/services.js/login/UsuariosMock.json";
     }
 
-    getUsuarios(){
-        return $.getJSON(this.serviceUrl);   
+    getUsuarios(nickname,password){
+        return $.getJSON(this.serviceUrl, {"nickname":nickname,"password": password});   
     }
 }

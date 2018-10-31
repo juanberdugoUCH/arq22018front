@@ -1,30 +1,21 @@
 $(document).ready(function(){
    var nickname;
-   var passsword;
+   var password;
     $("#log").click(function(){
-        cargarUsuarios();  
         nickname=$("#nick").val();
-        passsword=$("#pass").val();
-
-  
+        password=$("#pass").val();
+        cargarUsuarios();  
     });
 
     function cargarUsuarios(){
-    console.log(nickname);
-    console.log(passsword);
         var UsuariosServices = new LoginService();
-        UsuariosServices.getUsuarios().then(function(usuarios){
-            alert("entro");
-            if(usuarios.nombre==nickname && usuarios.passsword==passsword)
-            {
-                alert("Usuario y contraseña correctos");
+        UsuariosServices.getUsuarios(nickname,password).then(function(usuarios){
+            console.log(usuarios);
+            if(usuarios.error != "0"){
+                alert("Usuario Desconocido");
+            }else{
+                window.location.replace("main.html"); 
             }
-            else 
-            alert("Vuelva a ingresar los datos");
         });
-        }
-       
-    
-    
-    
-    });
+    }
+});
