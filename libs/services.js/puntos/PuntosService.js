@@ -1,8 +1,8 @@
 class PuntosService {
     
     constructor() {
-        //this.serviceUrl = "/api/puntos";
-        this.serviceUrl = "./libs/services.js/puntos/puntosMock.json";
+        this.serviceUrl = "http://localhost:8080/getData";
+        //this.serviceUrl = "./libs/services.js/puntos/puntosMock.json";
         //this.editPointsUrl = "/api/editPoints";
         this.editPointsUrl = "./libs/services.js/puntos/actividadResult.json";
     }
